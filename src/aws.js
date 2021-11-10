@@ -57,7 +57,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     throw error;
   }
 }
-
+// Add some comments
 async function terminateEc2Instance() {
   const ec2 = new AWS.EC2();
 
