@@ -65,6 +65,10 @@ inputs:
     description: >-
       Directory that contains actions-runner software and scripts. E.g. /home/runner/actions-runner.
     required: false
+  key-pair:
+    description: >-
+      SSH Key pair to
+    required: false
 outputs:
   label:
     description: >-

@@ -45,6 +45,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     SecurityGroupIds: [config.input.securityGroupId],
     IamInstanceProfile: { Name: config.input.iamRoleName },
     TagSpecifications: config.tagSpecifications,
+    KeyName: config.input.keyPair,
   };
 
   try {
@@ -57,7 +58,7 @@ async function startEc2Instance(label, githubRegistrationToken) {
     throw error;
   }
 }
-// Add some comments
+
 async function terminateEc2Instance() {
   const ec2 = new AWS.EC2();
 
